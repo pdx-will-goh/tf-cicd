@@ -23,7 +23,7 @@ pipeline{
                 ), string(credentialsId: 'access_key', variable: 'ARM_ACCESS_KEY')]) {
                         
                         sh """
-                                
+                        printenv
                         echo "Initialising Terraform"
                         export "access_key=$ARM_ACCESS_KEY"
                         terraform init
